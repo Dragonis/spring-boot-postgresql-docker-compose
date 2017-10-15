@@ -1,4 +1,4 @@
-all: umake umake-programs chromium sublime-text-3 docker git visual-studio-code
+all: umake umake-programs chromium sublime-text-3 docker git visual-studio-code nodejs
 
 umake:
 	sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make -y
@@ -57,3 +57,12 @@ docker:
 # docker-uninstall:
 # 	sudo apt remove docker -y
 # 	sudo apt remove docker-compose -y
+
+nodejs:
+	#sudo apt-get install nodejs -y
+	sudo apt-get install nodejs-legacy -y
+	sudo apt-get install npm -y
+	sudo npm install -g n
+	sudo n latest
+	sudo npm install -g @angular/cli@latest
+	sudo npm install -g yarn
