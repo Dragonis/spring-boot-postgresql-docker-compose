@@ -7,11 +7,11 @@ services:
     depends_on:
     - mypostgres
   mypostgres:
-    image: postgres
+    image: postgres:9.6.4
     ports:
      - "5432:5432"
     environment:
-     - POSTGRES_PASSWORD=password
+     - POSTGRES_PASSWORD=postgres
      - POSTGRES_USER=postgres
      - POSTGRES_DB=mydb
 
